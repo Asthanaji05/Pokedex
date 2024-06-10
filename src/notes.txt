@@ -1,0 +1,44 @@
+
+          
+          
+          
+
+<div className="pokemon-images">
+            <h1>Images:</h1>
+            <img src={pokemonData.sprites.front_default} alt="Front Default" />
+            <img src={pokemonData.sprites.back_default} alt="Back Default" />
+            <img src={pokemonData.sprites.front_shiny} alt="Front Shiny" />
+            <img src={pokemonData.sprites.back_shiny} alt="Back Shiny" />
+          </div>
+
+          <div className="pokemon-stats">
+            <h1>Stats:</h1>
+            <p>Defense: {pokemonData.stats.find(stat => stat.stat.name === 'defense').base_stat}</p>
+            <p>Attack: {pokemonData.stats.find(stat => stat.stat.name === 'attack').base_stat}</p>
+            <p>Special Attack: {pokemonData.stats.find(stat => stat.stat.name === 'special-attack').base_stat}</p>
+            <p>Special Defense: {pokemonData.stats.find(stat => stat.stat.name === 'special-defense').base_stat}</p>
+            <p>HP: {pokemonData.stats.find(stat => stat.stat.name === 'hp').base_stat}</p>
+          </div>
+
+          <div className="pokemon-types">
+            <h1>Types:</h1>
+            {pokemonData.types.map((type, index) => (
+              <><p key={index}>{type.type.name}</p>
+              <img src={`https://pokeapi.co/api/v2/type/${type.type.name}.png`} alt={type.type.name} />
+              </>
+            ))}
+          </div>
+
+                    
+
+          
+
+          <Graph pokemonData={pokemonData}/>
+
+
+
+----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+          return (
+    
+  );
