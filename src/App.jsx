@@ -275,7 +275,13 @@ function App() {
             <p>SELECT</p>
           </div>
 		      <div id="square-button-left">
-		        <input id="nb" name="howmuch" value={Id} />
+		        <input id="nb" name="howmuch" value={Id} 
+    onChange={(e) => {
+      const value = Number(e.target.value);
+      if (value >= 1 && value <= 1025) {
+        setId(value);
+      }
+    }} />
 		      </div>
 		      <div id="cross">
 		        <div id="mid-cross" >
