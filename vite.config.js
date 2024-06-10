@@ -10,7 +10,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/pokedex/'
+    config.base = '/Pokedex/'
   }
 
   return config
